@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  atleta-store-api:
+    image: wilsonalmeida14/atleta-store-api
+    ports:
+      - "8080:8080"
+  atleta-store-bff:
+    image: wilsonalmeida14/atleta-store-bff
+    ports:
+      - "8081:8081"
+    environment:
+      - API_URL=atleta-store-api:8080
+    depends_on:
+      - "atleta-store-api"
