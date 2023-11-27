@@ -1,0 +1,52 @@
+@import 'variables.scss';
+
+@mixin breakpoint($point) {
+  @if $point ==phone-only {
+    @media screen and (max-width: 599px) {
+      font-size: $custom-font-size-sm;
+      @content;
+    }
+  }
+
+  @else if $point ==tablet-portrait-up {
+    @media screen and (min-width: 600px) {
+      font-size: $custom-font-size-md;
+      @content;
+    }
+  }
+
+  @else if $point ==tablet-landscape-up {
+    @media screen and (min-width: 900px) {
+      font-size: $custom-font-size-md;
+      @content;
+    }
+  }
+
+  @else if $point ==desktop-up {
+    @media screen and (min-width: 1200px) {
+      font-size: $custom-font-size-lg;
+      @content;
+    }
+  }
+
+  @else if $point ==big-desktop-up {
+    @media screen and (min-width: 1800px) {
+      font-size: $custom-font-size-xl;
+      @content;
+    }
+  }
+}
+
+@mixin horizontal-list($justify-content, $align-items) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin vertical-list($justify-content, $align-items) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
