@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
     this.productService.getProducts().subscribe(value => {
-      console.log(value);
+      console.log('value',value);
     })
   }
 
