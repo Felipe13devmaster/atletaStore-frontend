@@ -50,3 +50,13 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin show-element($boolean) {
+  @if $boolean ==true {
+    display: block;
+  }
+
+  @else {
+    display: none;
+  }
+}

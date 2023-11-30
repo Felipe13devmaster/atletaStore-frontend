@@ -7,16 +7,26 @@
   &__top {
     @include horizontal-list(space-between, center);
     padding-top: 8px;
+
+    &__right {
+      >button {
+        @include show-element(false);
+      }
+    }
   }
 
   &__input {
     @include horizontal-list(space-between, center);
     background-color: white;
     border-radius: 4px;
+    width: 350px;
+    height: 40px;
+    padding: 0 8px;
 
     >input {
       outline: none;
       border: none;
+      width: 100%;
     }
 
     >input::placeholder {
@@ -35,8 +45,31 @@
   @include breakpoint(phone-only) {
     padding: 0 12px;
 
+    &__input {
+      width: 225px;
+      height: 30px;
+    }
+
     input::placeholder {
       font-size: $custom-font-size-sm;
+    }
+
+    &__top {
+      padding-bottom: 8px;
+    }
+
+    &__top__right {
+      >a {
+        @include show-element(false);
+      }
+
+      >button {
+        @include show-element(true);
+      }
+    }
+
+    &__bottom {
+      @include show-element(false);
     }
   }
 
