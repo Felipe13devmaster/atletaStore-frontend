@@ -3,8 +3,19 @@
     <div class="header__top__left">LOGOTIPO</div>
     <div class="header__top__center">
       <div class="header__input">
-        <input type="text" id="input-search" placeholder="O que esta procurando?">
-        <mat-icon>search</mat-icon>
+        <input type="text" id="input-search" placeholder="O que esta procurando?"
+          #inputSearch
+          (focus)="inputSearchOnFocus()"
+          (blur)="inputSearchOnBlur()"
+        >
+        <mat-icon #iconSearch 
+          [ngClass]="inputSearchIsFocused ? 'hide' : 'show'"
+        >search</mat-icon>
+        <mat-icon 
+          #iconClose
+          [ngClass]="inputSearchIsFocused ? 'show' : 'hide'"
+          (click)="inputSearchClearValue()"
+        >close</mat-icon>
       </div>
     </div>
     <div class="header__top__right">
