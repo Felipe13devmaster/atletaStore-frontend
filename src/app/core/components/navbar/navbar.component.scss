@@ -9,7 +9,7 @@
     padding-top: 8px;
 
     &__right {
-      >button {
+      >button:nth-child(2) {
         @include show-element(false);
       }
     }
@@ -59,11 +59,11 @@
     }
 
     &__top__right {
-      >a {
+      >button:nth-child(1) {
         @include show-element(false);
       }
 
-      >button {
+      >button:nth-child(2) {
         @include show-element(true);
       }
     }

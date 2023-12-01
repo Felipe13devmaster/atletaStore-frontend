@@ -7,3 +7,8 @@ export interface Product {
   price: number;
   sizes: string[];
 }
+
+export interface DialogLoginData {
+  email: string;
+  password: string;
+}

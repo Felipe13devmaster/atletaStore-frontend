@@ -18,12 +18,15 @@
       </div>
     </div>
     <div class="header__top__right">
-      <a>Entre ou cadastre-se</a>
+      <button mat-button (click)="openLoginDialog()">Entre ou cadastre-se</button>
+      <!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Entre ou cadastre-se</button>
+        <button mat-menu-item 
+          (click)="openLoginDialog()"
+        >Entre ou cadastre-se</button>
         <button mat-menu-item>Item 2</button>
       </mat-menu>
     </div>

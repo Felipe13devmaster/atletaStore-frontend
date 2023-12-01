@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Ja é cliente?</h1>
+<div mat-dialog-content>
+  <div class="column">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="data.email" cdkFocusInitial>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Senha</mat-label>
+      <input matInput [(ngModel)]="data.password">
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Não é cliente?</button>
+  <button mat-raised-button [mat-dialog-close]="data">Entrar</button>
+</div>
